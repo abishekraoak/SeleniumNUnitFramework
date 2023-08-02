@@ -6,8 +6,8 @@ namespace SeleniumNUnitFramework.Utilities
     public class Configuration
     {
         public string SpanishPointURL { get; set; }
-        public string LogFilePath { get; set; }
-        public string ChromeDriverPath { get; set; }
+        public string ContentCollabHeaderText { get; set; }
+        public string ParagraphText { get; set; }
 
         public static Configuration Load(string filePath)
         {

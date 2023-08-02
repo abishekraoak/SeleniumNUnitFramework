@@ -19,10 +19,10 @@ namespace SeleniumNUnitFramework.SpanishPointWebPages
         private By btnRejectCookies = By.CssSelector("a#wt-cli-reject-btn");
         private By menuItemModernWork = By.XPath("//li[contains(@class,'menu-item-type-post_type')]/a/span[text()='Modern Work']");
 
-        public HomePage VisitSpanishPointHomePage()
+        public HomePage VisitSpanishPointHomePage(string spanishPointURL)
         {
             logger.LogInfo("Navigating to Spanish Point URL");
-            webDriver.Navigate().GoToUrl("https://www.spanishpoint.ie/");
+            webDriver.Navigate().GoToUrl(spanishPointURL);
 
             IWebElement eleRejectCookies = SeleniumUtils.WaitUntilElementDisplayed(webDriver, btnRejectCookies,
                 "Cookies Dialog", logger, 5);
