@@ -29,7 +29,8 @@ public class Tests
 
         logger.LogInfo("Execution Started");
         logger.LogInfo("Initialising Chrome Driver");
-        webDriver = new ChromeDriver("/Users/abishekrao/Projects/SeleniumNUnitFramework/chromedriver"); 
+        string chromeDriverPath = Path.Combine(Directory.GetCurrentDirectory(), "chromedriver");
+        webDriver = new ChromeDriver(chromeDriverPath);
         webDriver.Manage().Window.Maximize();
     }
 
